@@ -1,0 +1,234 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3br0m8yo8l7n"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_63rwk"]
+[ext_resource type="Texture2D" uid="uid://btswj38ecoj82" path="res://res/home.webp" id="2_cj3w6"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_63rwk")
+
+[node name="Menu" type="Node" parent="."]
+
+[node name="Background" type="ColorRect" parent="Menu"]
+offset_right = 1080.0
+offset_bottom = 2920.0
+color = Color(0.666667, 0.666667, 0.666667, 1)
+
+[node name="Bar" type="ColorRect" parent="Menu/Background"]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 200.0
+
+[node name="Name" type="Label" parent="Menu/Background/Bar"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 200.0
+theme_override_font_sizes/font_size = 64
+text = "Calcul - Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Home" type="Button" parent="Menu/Background/Bar"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 190.0
+offset_bottom = 190.0
+icon = ExtResource("2_cj3w6")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Cam" type="Camera2D" parent="Menu"]
+anchor_mode = 0
+
+[node name="LVL" type="Node" parent="."]
+
+[node name="LVL" type="Label" parent="LVL"]
+unique_name_in_owner = true
+offset_top = 200.0
+offset_right = 1080.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 64
+text = "LVL 1 - 1/1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Home" type="Node" parent="."]
+
+[node name="Play" type="Button" parent="Home"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 400.0
+offset_right = 980.0
+offset_bottom = 600.0
+theme_override_font_sizes/font_size = 64
+text = "Jouer"
+
+[node name="Jeu" type="Node" parent="."]
+
+[node name="Eq" type="Label" parent="Jeu"]
+unique_name_in_owner = true
+offset_top = 350.0
+offset_right = 1080.0
+offset_bottom = 550.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Calcul"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sol" type="Label" parent="Jeu"]
+unique_name_in_owner = true
+offset_top = 550.0
+offset_right = 1080.0
+offset_bottom = 750.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Res" type="LineEdit" parent="Jeu"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 750.0
+offset_right = 980.0
+offset_bottom = 950.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_placeholder_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+placeholder_text = "Votre Réponse"
+alignment = 1
+clear_button_enabled = true
+
+[node name="Numpad" type="Node" parent="Jeu"]
+unique_name_in_owner = true
+
+[node name="Suivant" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 1600.0
+offset_right = 680.0
+offset_bottom = 1750.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "Suivant"
+
+[node name="7" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 1000.0
+offset_right = 380.0
+offset_bottom = 1150.0
+theme_override_font_sizes/font_size = 64
+text = "7"
+
+[node name="8" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 1000.0
+offset_right = 680.0
+offset_bottom = 1150.0
+theme_override_font_sizes/font_size = 64
+text = "8"
+
+[node name="9" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 700.0
+offset_top = 1000.0
+offset_right = 980.0
+offset_bottom = 1150.0
+theme_override_font_sizes/font_size = 64
+text = "9"
+
+[node name="4" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 1200.0
+offset_right = 380.0
+offset_bottom = 1350.0
+theme_override_font_sizes/font_size = 64
+text = "4"
+
+[node name="5" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 1200.0
+offset_right = 680.0
+offset_bottom = 1350.0
+theme_override_font_sizes/font_size = 64
+text = "5"
+
+[node name="6" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 700.0
+offset_top = 1200.0
+offset_right = 980.0
+offset_bottom = 1350.0
+theme_override_font_sizes/font_size = 64
+text = "6
+"
+
+[node name="1" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 1400.0
+offset_right = 380.0
+offset_bottom = 1550.0
+theme_override_font_sizes/font_size = 64
+text = "1
+"
+
+[node name="2" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 1400.0
+offset_right = 680.0
+offset_bottom = 1550.0
+theme_override_font_sizes/font_size = 64
+text = "2"
+
+[node name="3" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 700.0
+offset_top = 1400.0
+offset_right = 980.0
+offset_bottom = 1550.0
+theme_override_font_sizes/font_size = 64
+text = "3"
+
+[node name="0" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 1600.0
+offset_right = 380.0
+offset_bottom = 1750.0
+theme_override_font_sizes/font_size = 64
+text = "0"
+
+[node name="-" type="Button" parent="Jeu/Numpad"]
+unique_name_in_owner = true
+offset_left = 700.0
+offset_top = 1600.0
+offset_right = 980.0
+offset_bottom = 1750.0
+theme_override_font_sizes/font_size = 64
+text = "-"
+
+[connection signal="pressed" from="Menu/Background/Bar/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Home/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Jeu/Numpad/Suivant" to="." method="_on_suivant_pressed"]
+[connection signal="pressed" from="Jeu/Numpad/7" to="." method="_on_numpad_pressed" binds= ["7"]]
+[connection signal="pressed" from="Jeu/Numpad/8" to="." method="_on_numpad_pressed" binds= ["8"]]
+[connection signal="pressed" from="Jeu/Numpad/9" to="." method="_on_numpad_pressed" binds= ["9"]]
+[connection signal="pressed" from="Jeu/Numpad/4" to="." method="_on_numpad_pressed" binds= ["4"]]
+[connection signal="pressed" from="Jeu/Numpad/5" to="." method="_on_numpad_pressed" binds= ["5"]]
+[connection signal="pressed" from="Jeu/Numpad/6" to="." method="_on_numpad_pressed" binds= ["6"]]
+[connection signal="pressed" from="Jeu/Numpad/1" to="." method="_on_numpad_pressed" binds= ["1"]]
+[connection signal="pressed" from="Jeu/Numpad/2" to="." method="_on_numpad_pressed" binds= ["2"]]
+[connection signal="pressed" from="Jeu/Numpad/3" to="." method="_on_numpad_pressed" binds= ["3"]]
+[connection signal="pressed" from="Jeu/Numpad/0" to="." method="_on_numpad_pressed" binds= ["0"]]
+[connection signal="pressed" from="Jeu/Numpad/-" to="." method="_on_numpad_pressed" binds= ["-"]]
